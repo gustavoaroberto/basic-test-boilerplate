@@ -1,0 +1,14 @@
+.icon {
+  min-width: 16px;
+  min-height: 16px;
+  background-color: $black;
+  transition: all 0.4s;
+
+  &.arrow-up {
+    min-width: 18px;
+    min-height: 22px;
+    -webkit-mask: url("../images/icons/arrow-up.svg") no-repeat;
+    mask: url("../images/icons/arrow-up.svg") no-repeat;
+    mask-size: contain;
+  }
+}
