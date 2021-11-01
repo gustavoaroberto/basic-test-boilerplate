@@ -1,10 +1,8 @@
+@import "base/reset";
+@import "base/typography";
 @import "utils/variables";
+
 @import "components/buttons";
 @import "components/icons";
-@import "base/typography";
-
-body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  background-color: white;
-  font-size: 16px;
-}
+@import "components/inputs";
+@import "components/card";

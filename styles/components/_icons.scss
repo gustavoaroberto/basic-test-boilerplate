@@ -5,10 +5,92 @@
   transition: all 0.4s;
 
   &.arrow-up {
+    min-width: 22px;
+    min-height: 22px;
+    -webkit-mask: url("../images/icons/arrow-up.svg") no-repeat;
+    mask: url("../images/icons/arrow-up.svg") no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  &.one-drop {
+    min-width: 16px;
+    min-height: 16px;
+    -webkit-mask: url("../images/icons/1-drop.svg") no-repeat;
+    mask: url("../images/icons/1-drop.svg") no-repeat;
+    mask-size: contain;
+  }
+
+  &.two-drops {
+    min-width: 22px;
+    min-height: 22px;
+    -webkit-mask: url("../images/icons/2-drops.svg") no-repeat;
+    mask: url("../images/icons/2-drops.svg") no-repeat;
+    mask-size: contain;
+  }
+
+  &.three-drops {
+    min-width: 24px;
+    min-height: 18px;
+    -webkit-mask: url("../images/icons/3-drops.svg") no-repeat;
+    mask: url("../images/icons/3-drops.svg") no-repeat;
+    mask-size: contain;
+  }
+
+  &.arrow-down {
+    min-width: 18px;
+    min-height: 22px;
+    -webkit-mask: url("../images/icons/arrow-down.svg") no-repeat;
+    mask: url("../images/icons/arrow-down.svg") no-repeat;
+    mask-size: contain;
+  }
+
+  &.arrow-up {
     min-width: 18px;
     min-height: 22px;
     -webkit-mask: url("../images/icons/arrow-up.svg") no-repeat;
     mask: url("../images/icons/arrow-up.svg") no-repeat;
+    mask-size: contain;
+  }
+
+  &.high-sun {
+    min-width: 19px;
+    min-height: 19px;
+    -webkit-mask: url("../images/icons/high-sun.svg") no-repeat;
+    mask: url("../images/icons/high-sun.svg") no-repeat;
+    mask-position: center center;
+    background-size: cover;
+  }
+
+  &.low-sun {
+    min-width: 18px;
+    min-height: 22px;
+    -webkit-mask: url("../images/icons/low-sun.svg") no-repeat;
+    mask: url("../images/icons/low-sun.svg") no-repeat;
+    mask-size: contain;
+  }
+
+  &.no-sun {
+    min-width: 16px;
+    min-height: 18px;
+    -webkit-mask: url("../images/icons/no-sun.svg") no-repeat;
+    mask: url("../images/icons/no-sun.svg") no-repeat;
+    mask-size: contain;
+  }
+
+  &.pet {
+    min-width: 22px;
+    min-height: 18px;
+    -webkit-mask: url("../images/icons/pet.svg") no-repeat;
+    mask: url("../images/icons/pet.svg") no-repeat;
+    mask-size: contain;
+  }
+
+  &.toxic {
+    min-width: 18px;
+    min-height: 22px;
+    -webkit-mask: url("../images/icons/toxic.svg") no-repeat;
+    mask: url("../images/icons/toxic.svg") no-repeat;
     mask-size: contain;
   }
 }
