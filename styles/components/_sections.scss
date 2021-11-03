@@ -46,6 +46,8 @@
 }
 
 .third-section {
+  display: none;
+  overflow-x: hidden;
   .title-container {
     padding: 0 10px;
     & > img {
@@ -60,5 +62,28 @@
 
   .button {
     margin-top: 28px;
+  }
+}
+
+.no-result-section {
+  display: none;
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    color: #a9a9a9;
+    font-weight: 700;
+  }
+
+  p {
+    color: #a9a9a9;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+    margin: 16px 0 38px 0;
   }
 }

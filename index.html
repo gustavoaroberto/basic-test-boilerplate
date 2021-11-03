@@ -32,8 +32,8 @@
               <b>1. </b>Set the amount of <b>sunlight</b> your plant will get.
             </p>
             <div class="select-container">
-              <select>
-                <option>Select...</option>
+              <select id="sun">
+                <option value="">Select...</option>
                 <option value="no">No light</option>
                 <option value="low">Low light</option>
                 <option value="high">High light</option>
@@ -44,11 +44,11 @@
             <img src="images/illustrations/wateringcan.png" alt="sunlight" />
             <p><b>2. </b> How often do you want to <b>water</b> your plant?</p>
             <div class="select-container">
-              <select>
-                <option>Select...</option>
-                <option value="regularly ">Regularly</option>
-                <option value="daily ">Daily</option>
-                <option value="rarely ">Rarely</option>
+              <select id="water">
+                <option value="">Select...</option>
+                <option value="regularly">Regularly</option>
+                <option value="daily">Daily</option>
+                <option value="rarely">Rarely</option>
               </select>
             </div>
           </div>
@@ -56,114 +56,60 @@
             <img src="images/illustrations/dog.png" alt="sunlight" />
             <p><b>3. </b> Do you have pets? Do they <b>chew</b> plants?</p>
             <div class="select-container">
-              <select>
-                <option>Select...</option>
-                <option value="true ">Yes</option>
-                <option value="false ">No</option>
+              <select id="toxicity">
+                <option value="">Select...</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
               </select>
             </div>
           </div>
         </div>
       </div>
-      <div class="third-section">
+      <div id="third-section" class="third-section">
         <div class="content-container">
           <div class="title-container">
             <img src="images/illustrations/pick.png" />
             <h2 class="title">Our picks for you</h2>
           </div>
           <div id="card-container" class="card-container"></div>
-          <button class="button">
+          <button id="scroll-to-top" class="button">
             <i class="icon arrow-up"></i>back to the top
           </button>
         </div>
       </div>
+      <div id="no-result-section" class="no-result-section">
+        <div class="content-container">
+          <h2 class="title">No results yet...</h2>
+          <p>
+            Use the filters above to find the plant that best fits your
+            environment :)
+          </p>
+          <img src="images/illustrations/no-results.png" alt="no results" />
+        </div>
+      </div>
     </main>
     <script src="scripts/nodeObjects.js"></script>
+    <script src="scripts/api.js"></script>
     <script>
-      const data = [
-        {
-          id: 1,
-          name: "Euphorbia eritrea",
-          sun: "high",
-          water: "rarely",
-          url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png",
-          price: 25,
-          toxicity: false,
-          staff_favorite: true,
-        },
-        {
-          id: 2,
-          name: "Succulent Bowl",
-          sun: "high",
-          water: "rarely",
-          url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/succulent-bowl.png",
-          price: 30,
-          toxicity: false,
-          staff_favorite: false,
-        },
-        {
-          id: 3,
-          name: "Bunny ears cacti",
-          sun: "high",
-          water: "rarely",
-          url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/bunny-ears-cacti.png",
-          price: 20,
-          toxicity: false,
-          staff_favorite: false,
-        },
-        {
-          id: 4,
-          name: "Ficus lyrata",
-          sun: "high",
-          water: "regularly",
-          url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/ficus-lyrata.png",
-          price: 30,
-          toxicity: false,
-          staff_favorite: false,
-        },
-        {
-          id: 5,
-          name: "Bamboo",
-          sun: "low",
-          url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/lucky-bamboo.png",
-          water: "regularly",
-          price: 15,
-          toxicity: false,
-          staff_favorite: false,
-        },
-        {
-          id: 6,
-          name: "Ponytail Palm",
-          sun: "low",
-          water: "regularly",
-          url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/ponytail-palm.png",
-          price: 50,
-          toxicity: false,
-          staff_favorite: false,
-        },
-        {
-          id: 7,
-          name: "Pilea peperomioides",
-          sun: "no",
-          url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/pilea-peperomioides.png",
-          water: "regularly",
-          price: 50,
-          toxicity: true,
-          staff_favorite: false,
-        },
-      ];
-      data.forEach((el) => {
-        const { name, sun, water, url, price, toxicity, staff_favorite } = el;
-        Card({
-          name,
-          sun,
-          water,
-          url,
-          price,
-          toxicity,
-          staff_favorite,
-        });
+      document.getElementById("water").addEventListener("blur", function () {
+        fetchData();
       });
+
+      document.getElementById("sun").addEventListener("blur", function () {
+        fetchData();
+      });
+
+      document.getElementById("toxicity").addEventListener("blur", function () {
+        fetchData();
+      });
+      document
+        .getElementById("scroll-to-top")
+        .addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
     </script>
   </body>
 </html>
