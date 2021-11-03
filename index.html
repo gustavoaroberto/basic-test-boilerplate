@@ -12,18 +12,72 @@
   </head>
 
   <body>
-    <img src="images/icons/logo-white.svg" alt="Greenthumb" />
-    <button class="button"><i class="icon arrow-up"></i>back to the top</button>
-    <button class="button">back to the top</button>
-    <div id="card-container" class="card-container"></div>
-    <div class="select-container">
-      <select>
-        <option>Select...</option>
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-      </select>
-    </div>
+    <main>
+      <div class="first-section">
+        <div class="content-container">
+          <img
+            class="logo"
+            src="images/icons/logo-white.svg"
+            alt="green thumb"
+          />
+          <h1 class="title">Find your next green friend</h1>
+          <img src="images/icons/arrow-down.svg" alt="arrow-down" />
+        </div>
+      </div>
+      <div class="second-section">
+        <div class="content-container">
+          <div>
+            <img src="images/illustrations/sun.png" alt="sunlight" />
+            <p>
+              <b>1. </b>Set the amount of <b>sunlight</b> your plant will get.
+            </p>
+            <div class="select-container">
+              <select>
+                <option>Select...</option>
+                <option value="no">No light</option>
+                <option value="low">Low light</option>
+                <option value="high">High light</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <img src="images/illustrations/wateringcan.png" alt="sunlight" />
+            <p><b>2. </b> How often do you want to <b>water</b> your plant?</p>
+            <div class="select-container">
+              <select>
+                <option>Select...</option>
+                <option value="regularly ">Regularly</option>
+                <option value="daily ">Daily</option>
+                <option value="rarely ">Rarely</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <img src="images/illustrations/dog.png" alt="sunlight" />
+            <p><b>3. </b> Do you have pets? Do they <b>chew</b> plants?</p>
+            <div class="select-container">
+              <select>
+                <option>Select...</option>
+                <option value="true ">Yes</option>
+                <option value="false ">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="third-section">
+        <div class="content-container">
+          <div class="title-container">
+            <img src="images/illustrations/pick.png" />
+            <h2 class="title">Our picks for you</h2>
+          </div>
+          <div id="card-container" class="card-container"></div>
+          <button class="button">
+            <i class="icon arrow-up"></i>back to the top
+          </button>
+        </div>
+      </div>
+    </main>
     <script src="scripts/nodeObjects.js"></script>
     <script>
       const data = [

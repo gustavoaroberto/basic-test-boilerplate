@@ -1,8 +1,10 @@
+@import "utils/variables";
+@import "base/grid";
 @import "base/reset";
 @import "base/typography";
-@import "utils/variables";
 
 @import "components/buttons";
 @import "components/icons";
 @import "components/inputs";
 @import "components/card";
+@import "components/sections";

@@ -1,0 +1,64 @@
+.first-section {
+  background-color: $terciary-color;
+  background-image: url(../images/hero/mobile/mobile-leaves.png),
+    url("../images/hero/mobile/mobile-plantperson.png");
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 60%, 100% 50%;
+  min-height: 600px;
+  height: 100%;
+  .logo {
+    width: 160px;
+  }
+
+  .title {
+    margin: 32px 0 16px 0;
+  }
+}
+
+.second-section {
+  padding: 0 12px;
+
+  div {
+    margin-top: 50px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  div:nth-of-type(2) img {
+    transform: rotateY(180deg);
+  }
+  img {
+    height: 75px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 15px 0 25px 0;
+
+    b {
+      font-weight: 700;
+    }
+  }
+}
+
+.third-section {
+  .title-container {
+    padding: 0 10px;
+    & > img {
+      height: 72px;
+    }
+
+    .title {
+      color: $black;
+      margin: 16px 0;
+    }
+  }
+
+  .button {
+    margin-top: 28px;
+  }
+}

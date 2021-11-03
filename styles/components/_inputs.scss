@@ -1,8 +1,22 @@
 .select-container {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../images/icons/dropdown.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 14px;
+    top: 16px;
+    width: 18px;
+    height: 9px;
+  }
+
   select {
     background-color: $white;
     font-size: 14px;
-    padding: 8px 20px;
+    padding: 12px 20px;
     width: 100%;
     border-radius: 20px;
     border: 1px solid #a8a8a8;
