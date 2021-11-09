@@ -1,4 +1,8 @@
 .content-container {
   width: 100%;
   padding: 28px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 54px 288px;
+  }
 }

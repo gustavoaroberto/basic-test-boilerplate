@@ -25,9 +25,10 @@ const Icon = function ({ icon }) {
   return node;
 };
 
-const Container = function ({ className }) {
+const Container = function ({ className, id }) {
   const node = document.createElement("div");
   className && node.classList.add(className);
+  id && node.setAttribute("id", id);
   return node;
 };
 
@@ -69,10 +70,15 @@ window.Card = function Card({
   toxicity,
   staff_favorite,
 }) {
-  const card = Container({ className: "card" });
+  const card = Container({
+    className: "card",
+    id: staff_favorite && "staff_favorite",
+  });
+
   const image = Image({ src: url, alt: name });
   const imageContainer = Container({ className: "img-container" });
   const title = Title({ content: name });
+  const genericContainer = Container({});
   const infoContainer = Container({ className: "container" });
   const priceTag = Price({ content: "$" + price });
   const iconContainer = Container({ className: "icon-container" });
@@ -88,8 +94,9 @@ window.Card = function Card({
   imageContainer.appendChild(image);
   iconContainer.append(iconToxicity, iconSun, iconWater);
   infoContainer.append(priceTag, iconContainer);
+  genericContainer.append(title, infoContainer);
 
-  card.append(imageContainer, title, infoContainer);
+  card.append(imageContainer, genericContainer);
 
   document.getElementById("card-container").append(card);
 
